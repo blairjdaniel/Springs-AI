@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar Events</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f4f4f4;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Upcoming Calendar Events</h1>
+    {% if events %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Event</th>
+                    <th>Start Time</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for event in events %}
+                    <tr>
+                        <td>{{ event.summary }}</td>
+                        <td>{{ event.start.dateTime if event.start.dateTime else event.start.date }}</td>
+                        <td>{{ event.description if event.description else "No description" }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No upcoming events found.</p>
+    {% endif %}
+    <p><a href="/">Back to Home</a></p>
+</body>
+</html>

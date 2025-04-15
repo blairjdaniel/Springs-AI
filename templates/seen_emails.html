@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Seen Emails</title>
+</head>
+<body>
+    <h1>Seen Emails</h1>
+    <p>{{ result }}</p>
+    <ul>
+        {% for email in seen_emails %}
+        <li>
+            <strong>Sender:</strong> {{ email.sender }}<br>
+            <strong>Subject:</strong> {{ email.subject }}<br>
+            <strong>Body:</strong> {{ email.body }}<br>
+            <strong>Type:</strong> {{ email.email_type }}<br>
+            <strong>Response:</strong> {{ email.response }}
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

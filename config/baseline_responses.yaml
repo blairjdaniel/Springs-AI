@@ -1,0 +1,67 @@
+forms:
+  contact:
+    subject: "Thanks for reaching out to Springs RV Resort"
+    body: |
+      Hi {first_name},
+
+      Thanks so much for reaching out! My name is Kelsey, and I’m the Sales Assistant here at Springs RV Resort.
+      
+      I’d be happy to set you up with our Sales Manager, Jamie Smith, for a personal resort tour so you can get a feel for what makes the Springs so special. You’re welcome to reply with a day and time that works best for you, or you can book directly using our online calendar (BOOK HERE) or call 778-871-3160.
+      
+      If you have any questions or would like to chat before your visit, I’m always here to help!
+      
+      Warmly,
+      Kelsey
+      Sales Assistant
+      sales@springsrv.com
+      
+      Please note: Our Resort is recreational use only and does not allow full-time living.
+  waitlist:
+    subject: "You've joined the Springs RV Resort waitlist"
+    body: |
+      Hello {first_name},
+
+      Thank you for joining the waitlist at Springs RV Resort.
+
+      We have received your details and will be in touch soon with more information.
+
+      Best regards,
+      Kelsey
+      Springs RV Resort
+      sales@springsrv.com
+      
+      Please note: Our Resort is recreational use only and does not allow full-time living.
+  pricelist:
+    subject: "Springs RV Resort Phase 3 Price List Map For You!"
+    body: |
+      Hi {first_name},
+
+      Thank you for your interest in the Springs RV Resort. My name is Kelsey, and I’m the Sales Assistant here at Springs RV Resort.
+
+      I’ve included our Phase 3 Price List & Lot Map (click here) so you can explore availability, financing options, and layout details at your own pace. Our Phase 3 lots range from $269,000 to over $300,000. We also have lots that are for sale through our realtor and you can see prices and images here. The monthly maintenance fee is $210 and this includes your property taxes as well and this keeps the resort and pools looking beautiful! 
+
+      I’d be happy to set you up with our Sales Manager, Jamie Smith, for a personal resort tour so you can get a feel for what makes the Springs so special. You’re welcome to reply with a day and time that works best for you, or you can use our online calendar to book directly: BOOK HERE or call 778-871-3160 to find a time to come out.  
+
+      If you have any questions or would like to chat before your visit, I’m always here to help!
+      Warmly,
+      Kelsey
+      Sales Assistant
+      sales@springsrv.com
+
+
+      Please note: Our Resort is recreational use only and does not allow full-time living. Our owners and seasonals enjoy occasional winter use and RV storage. 
+  # inquiries:
+  #   subject: "Thanks for inquiring in the Springs RV Resort!"
+  #   body: |
+  #     Hi {first_name},
+
+  #     Thank you for your inquiry. We appreciate your interest in Springs RV Resort.
+
+  #     If you have any specific questions or need further assistance, feel free to reach out to us at sales@springsrv.com or call 778-871-3160.
+        
+  #     Warmly,
+  #     Kelsey
+  #     Sales Assistant
+  #     sales@springsrv.com
+        
+  #     Please note: Our Resort is recreational use only and does not allow full-time living.

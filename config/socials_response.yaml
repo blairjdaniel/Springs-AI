@@ -1,0 +1,49 @@
+{
+    "socials": {
+        "instagram": {
+            "label": "instagram",
+            "description": "Templates and guidelines for Instagram posts.",
+            "response_template": "{post_content}",
+            "guidelines": [
+                "Use engaging language and clear calls-to-action.",
+                "Include relevant hashtags.",
+                "Keep the tone friendly and community-oriented."
+            ],
+            "examples": [
+                {
+                    "post_content": "Book your RV site today! Get your summer together now, and enjoy the best of RV living at Springs RV Resort. #RVLife #SummerVibes #SpringsRVResort",
+                    "hashtags": ["#RVLife", "#SummerVibes", "#SpringsRVResort"]
+                },
+                {
+                    "post_content": "Celebrate BC Day in style at Springs RV Resort! Join us for fun outdoor activities and delicious local food. #BCDay #FamilyFun #SpringsRVResort",
+                    "hashtags": ["#BCDay", "#FamilyFun", "#SpringsRVResort"]
+                }
+            ]
+        },
+        "website": {
+            "label": "website",
+            "description": "Templates and guidelines for website content.",
+            "response_template": "{homepage_content}",
+            "guidelines": [
+                "Use clear and concise navigation labels.",
+                "Focus on SEO-optimized text.",
+                "Ensure mobile responsiveness and readability.",
+                "Keep a consistent brand voice."
+            ],
+            "examples": [
+                {
+                    "content": "Welcome to Springs RV Resort – your destination for luxury RV living and unforgettable experiences. Explore our amenities, book a tour, and join our vibrant community today.",
+                    "cta": "Book a Tour"
+                },
+                {
+                    "content": "Discover all that Springs RV Resort has to offer – from exquisite outdoor dining to relaxing poolside moments. Start your adventure now!",
+                    "cta": "Learn More"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "version": "1.0",
+        "description": "Social media and website response templates: use these to guide and classify content as either Instagram or Website content."
+    }
+}

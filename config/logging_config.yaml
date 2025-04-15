@@ -1,0 +1,38 @@
+version: 1
+formatters:
+  simple:
+    format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  detailed:
+    format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s - %(pathname)s:%(lineno)d"
+handlers:
+  console:
+    class: logging.StreamHandler
+    level: DEBUG     # Set the minimum level of logs for the console
+    formatter: simple
+    stream: ext://sys.stdout
+  file:
+    class: logging.FileHandler
+    level: INFO      # Set the minimum level for file logging
+    formatter: detailed
+    filename: "logs/training.log"
+loggers:
+  myapp:           # Customize the logger for your application
+    level: DEBUG
+    handlers: [console, file]
+    propagate: no
+root:
+  level: INFO
+  handlers: [console, file]
+
+
+
+  # for use
+# import logging.config
+# import yaml
+
+# with open("config/logging_config.yaml", "r") as file:
+#     config = yaml.safe_load(file)
+#     logging.config.dictConfig(config)
+
+# logger = logging.getLogger("myapp")
+# logger.info("Logging configuration loaded successfully!")

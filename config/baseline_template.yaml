@@ -1,0 +1,78 @@
+forms:
+  contact:
+    subject: "Thanks for reaching out to Springs RV Resort"
+    body: |
+      <html>
+        <body>
+          <p>Hi {first_name},</p>
+          <p>Thanks so much for reaching out! My name is Kelsey, and I’m the Sales Assistant here at Springs RV Resort.</p>
+          <p>I’d be happy to set you up with our Sales Manager, Jamie Smith, for a personal resort tour so you can get a feel for what makes the Springs so special. You’re welcome to reply with a day and time that works best for you, or you can use our online calendar to book directly: <a href="https://calendly.com/springs-rv-resort/springs-rv-resort-sales-meeting">BOOK HERE</a> or call 778-871-3160.</p>
+          <p>As you may know, our resort offers daily rentals, seasonal rentals, and RV lot ownership. If you’re exploring ownership, our brand-new Phase 3 lots range from $269,000 to over $300,000. We also have a selection of resale lots available; you can browse listings with photos and pricing <a href="https://springsrv.com/resale-lots-for-sale/">here</a>. The monthly maintenance fee is $210.</p>
+          <p>If you have any questions or would like to chat before your visit, I’m always here to help!</p>
+          <p>Warmly,<br>
+             Kelsey<br>
+             Sales Assistant<br>
+             <a href="mailto:sales@springsrv.com">sales@springsrv.com</a>
+          </p>
+          <p><strong>Please note:</strong> Our Resort is recreational use only and does not allow full-time living.</p>
+        </body>
+      </html>
+      
+  waitlist:
+    subject: "Re: Springs RV Resort Join the waitlist"
+    body: |
+      <html>
+        <body>
+          <p>Hello {first_name},</p>
+          <p>Thank you for joining the waitlist at Springs RV Resort.</p>
+          <p>We have received your details and will be in touch soon with more information.</p>
+          <p>Best regards,<br>
+             Kelsey,<br>
+             Springs RV Resort<br>
+             <a href="mailto:sales@springsrv.com">sales@springsrv.com</a>
+          </p>
+          <p><strong>Please note:</strong> Our Resort is recreational use only and does not allow full-time living.</p>
+        </body>
+      </html>
+      
+  pricelist:
+    subject: "Springs RV Resort Phase 3 Price List Map For You!"
+    body: |
+      <html>
+        <body>
+          <p>Hi {first_name},</p>
+          <p>Thank you for your interest in the Springs RV Resort. My name is Kelsey, and I’m the Sales Assistant here.</p>
+          <p>I’ve included our <a href="https://drive.google.com/file/d/1qYhagNPQEBBDbBXHJ7jBc0wMjS6sX45Y/view?usp=sharing">Phase 3 Price List & Lot Map</a> so you can explore availability, financing options, and layout details. Our Phase 3 lots range from $269,000 to over $300,000. We also have lots for sale through our realtor; see prices and images <a href="https://springsrv.com/resale-lots-for-sale/">here</a>. The monthly maintenance fee is $210.</p>
+          <p>I’d be happy to set you up with our Sales Manager, Jamie Smith, for a personal tour so you can experience what makes the Springs special. Reply with a preferred time or use our online calendar: <a href="https://calendly.com/springs-rv-resort/springs-rv-resort-sales-meeting">BOOK HERE</a> or call 778-871-3160.</p>
+          <p>If you have any questions or would like to chat before your visit, I’m here to help!</p>
+          <p>Warmly,<br>
+             Kelsey<br>
+             Sales Assistant<br>
+             <a href="mailto:sales@springsrv.com">sales@springsrv.com</a>
+          </p>
+          <p><strong>Please note:</strong> Our Resort is recreational use only and does not allow full-time living.</p>
+        </body>
+      </html>
+
+  inquiries:
+    subject: "Springs RV Resort Phase 3 Price List Map For You!"
+    body: |
+      <html>
+        <body>
+          <p>Hi {first_name},</p>
+          <p>Thank you for your interest in the Springs RV Resort. My name is Kelsey, and I’m the Sales Assistant here.</p>
+          <p>I’ve included our <a href="https://drive.google.com/file/d/1qYhagNPQEBBDbBXHJ7jBc0wMjS6sX45Y/view?usp=sharing">Phase 3 Price List & Lot Map</a> so you can explore availability, financing options, and layout details. Our Phase 3 lots range from $269,000 to over $300,000. We also have lots for sale through our realtor; see prices and images <a href="https://springsrv.com/resale-lots-for-sale/">here</a>. The monthly maintenance fee is $210.</p>
+          <p>I’d be happy to set you up with our Sales Manager, Jamie Smith, for a personal tour so you can experience what makes the Springs special. Reply with a preferred time or use our online calendar: <a href="https://calendly.com/springs-rv-resort/springs-rv-resort-sales-meeting">BOOK HERE</a> or call 778-871-3160.</p>
+          <p>If you have any questions or would like to chat before your visit, I’m here to help!</p>
+          <p>Warmly,<br>
+             Kelsey<br>
+             Sales Assistant<br>
+             <a href="mailto:sales@springsrv.com">sales@springsrv.com</a>
+          </p>
+          <p><strong>Please note:</strong> Our Resort is recreational use only and does not allow full-time living.</p>
+        </body>
+      </html>
+
+meta:
+  version: "1.0"
+  description: "Baseline templates for generating email responses based on email types."

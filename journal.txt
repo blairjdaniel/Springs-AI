@@ -1,0 +1,47 @@
+1. TOUR FOLLOW SYSTEM
+Simple way to log a tour — spreadsheet added to? Maybe I should have a couple things I have to fill in so I am 
+collecting lead data we need...where did they hear from us, what features they were excited about?? Dunno. 
+
+Automatic creation of a personalized follow-up email (JAMIE- write baseline response that would go out)
+
+Automatic sending of the email--would be good if I can review the first ones to make sure it is working before auto 
+sending. 
+
+Track follow-ups- can this be added to that spreadsheet? I dunno a way to mark they have been sent an email. 
+
+Reminder or Auto Follow Up email- to follow up again if no response within X days. 
+
+Reminder to connect in another month-- could this be added right into my calendar? 
+
+-Kelsey answer anything they put in what they are asking or confirm the tour? Add to my calendar?
+
+-Kelsey answer anything they put in comments about Seasonal rental. 
+
+-Kelsey answers anything they put in comments about Phase 3 or the resort as a whole.
+
+Each folder typically serves a distinct role in managing data and resources for your project:
+
+Cache:
+Stores temporary or intermediate data (e.g., downloaded models, precomputed results, or API responses) to speed up subsequent runs and avoid redundant computations.
+
+Embeddings:
+Contains computed embeddings for your dataset or documents. These can be used for similarity search, retrieval, or other processing tasks that depend on vector representations.
+
+Outputs:
+Holds final results, generated content, logs, or processed data produced by your application. This makes it easier to track and review outputs from experiments or production runs.
+
+Prompts:
+Stores prompt templates or examples used for guiding your LLM’s responses. By keeping prompt data separate, you can easily update and test different prompt strategies without altering your core code.
+
+Organizing your data into these folders helps maintain a clear separation of concerns and simplifies management of various project artifacts.
+
+You already have a strong base model, so you want to steer it toward your desired persona (Kelsey, the sales assistant at Springs RV) and use cases (emails, Instagram posts, forms, etc.). Here are some suggestions:
+
+• Instead of training on very narrow data, provide quality examples that cover the styles you want. For instance, include several emails, Instagram posts, and customer communication samples in your training dataset.
+• Use prompt engineering or few‑shot techniques to “instruct” the model to adopt Kelsey's tone and style.
+• Consider multi-task fine‑tuning or instruction tuning if you have various types of outputs (emails vs. posts). This gives the model context on when to use which style.
+
+You can definitely keep training your current model, but making the dataset diverse enough to cover each use case will help guide the generation reliably without overfitting to a single scenario.
+
+
+Ask jamie about having a set sentence for confirming a tour

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Check Emails</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 40px; }
+      table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+      th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+      th { background-color: #f2f2f2; }
+      h1, h2 { margin-top: 20px; }
+      form { margin-bottom: 20px; }
+    </style>
+  </head>
+  <body>
+    <h1>Check Emails</h1>
+    {% if result %}
+      <p><strong>{{ result }}</strong></p>
+    {% endif %}
+    <form method="post">
+      <button type="submit">Check for New Emails</button>
+    </form>
+    <h2>Processed Emails</h2>
+    {% if processed_emails %}
+      <table>
+        <thead>
+          <tr>
+            <th>Sender</th>
+            <th>Subject</th>
+            <th>Response</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for email in processed_emails %}
+          <tr>
+            <td>{{ email.sender }}</td>
+            <td>{{ email.subject }}</td>
+            <td>
+              {{ email.response }}
+              {% if "reschedule" in email.subject.lower() or "cancel" in email.subject.lower() %}
+              <br><strong>Note:</strong> This response was generated for a rescheduling or cancellation request.
+              {% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <p>No emails processed.</p>
+    {% endif %}
+    <!-- Button to fetch and log Calendly tours -->  
+    form action="/fetch_calendly_tours" method="post">
+        <button type="submit">Fetch and Log Calendly Tours</button>
+    </form>
+
+    <!-- Display result -->
+    {% if result %}
+        <p>{{ result }}</p>
+    {% endif %}
+    
+    <p><a href="/">Back to Home</a></p>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+forms:
+  contact:
+    description: "Expected fields for emails received via the Contact form."
+    required_fields:
+      - subject
+      - from
+      - city
+      - phone
+      - date
+      - body
+    properties:
+      subject:
+        type: string
+        example: "Springs RV Resort Contact Us"
+      from:
+        type: object
+        properties:
+          name: 
+            type: string
+            example: "George Parros"
+          email:
+            type: string
+            format: email
+            example: "example@gmail.com"
+      city:
+        type: string
+        example: "Abbostford"
+      phone:
+        type: integer
+        example: 6045576168
+      date:
+        type: string
+        format: date-time
+        example: "2025-01-24T15:17:22-08:00"
+      body:
+        type: string
+        example: "When would you like to come for a tour?, What are you interested in?, Anything you'd like to ask us?"
+  
+  
+  
+  waitlist:
+    description: "Expected fields for emails received via the Waitlist form."
+    required_fields:
+      - subject
+      - from
+      - city
+      - phone
+      - date
+      - body
+    properties:
+      subject:
+        type: string
+        example: "Springs RV Resort Contact Us"
+      from:
+        type: object
+        properties:
+          name: 
+            type: string
+            example: "George Parros"
+          email:
+            type: string
+            format: email
+            example: "example@gmail.com"
+      city:
+        type: string
+        example: "Abbostford"
+      phone:
+        type: integer
+        example: 6045576168
+      date:
+        type: string
+        format: date-time
+        example: "2025-01-24T15:17:22-08:00"
+      body:
+        type: string
+        example: "Requests or comments:"
+
+
+  price_list:
+    description: "Expected fields for emails received when requesting the price list."
+    required_fields:
+      - subject
+      - Name
+      - Email
+      - Phone
+      - City
+      - Comments
+    properties:
+      subject:
+        type: string
+        example: "Springs RV Resort Contact Us"
+      
+      name: 
+          type: string
+          example: "George Parros"
+      email:
+          type: string
+          format: email
+          example: "example@gmail.com"
+      city:
+        type: string
+        example: "Abbostford"
+      phone:
+        type: integer
+        example: 6045576168
+      body:
+        type: string
+        example: "just inquiring for a 24ft MH site"
+meta:
+  version: "1.0"
+  description: "Validation schema for incoming email formats for the Contact, Waitlist, and Price List forms."

@@ -1,0 +1,9 @@
+transformers==4.29.0
+torch==2.0.0             # or tensorflow==2.12.0 if using TensorFlow
+datasets==2.10.0
+fastapi==0.95.1
+uvicorn==0.22.0
+pyyaml==6.0
+python-dotenv==1.0.0
+pandas==1.5.3
+numpy==1.23.5

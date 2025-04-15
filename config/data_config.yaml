@@ -1,0 +1,31 @@
+data:
+  source: "/Users/blairjdaniel/AI-Assistant-Springs/data"
+  cleaned_data_path: "/Users/blairjdaniel/AI-Assistant-Springs/data/outputs"
+  split_ratio: 0.8  # 80% training, 20% validation
+
+preprocessing:
+  remove_duplicates: true
+  text_cleaning:
+    lower_case: false
+    remove_punctuation: false
+    remove_stopwords: false
+
+
+# how to use
+# import pandas as pd
+# from sklearn.model_selection import train_test_split
+# import yaml
+
+# # Load data configuration
+# with open("config/data_config.yaml", "r") as file:
+#     data_config = yaml.safe_load(file)["data"]
+
+# # Read the data
+# df = pd.read_csv(data_config["source"])
+
+# # Use train_test_split with split_ratio from YAML
+# train_ratio = data_config["split_ratio"]
+# train_df, test_df = train_test_split(df, test_size=(1 - train_ratio), random_state=42)
+
+# print("Training set size:", len(train_df))
+# print("Validation set size:", len(test_df))

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Check Emails</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 40px; }
+      table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+      th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+      th { background-color: #f2f2f2; }
+      h1, h2 { margin-top: 20px; }
+      form { margin-bottom: 20px; }
+    </style>
+  </head>
+  <body>
+    <h1>Check Emails</h1>
+    {% if result %}
+      <p><strong>{{ result }}</strong></p>
+    {% endif %}
+    <form method="post">
+      <button type="submit">Check for New Emails</button>
+    </form>
+    
+    <!-- Display a baseline response from the YAML file -->
+    <p><strong>Default Response:</strong> {{ baseline_responses.default_response }}</p>
+    
+    <h2>Spam Emails</h2>
+    {% if spam_emails %}
+      <table>
+        <thead>
+          <tr>
+            <th>Sender</th>
+            <th>Subject</th>
+            <th>Classification</th>
+            <th>Confidence</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for email in spam_emails %}
+          <tr>
+            <td>{{ email.sender }}</td>
+            <td>{{ email.subject }}</td>
+            <td>{{ email.classification }}</td>
+            <td>{{ email.confidence }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <p>No spam emails found.</p>
+    {% endif %}
+    
+    <h2>Non-Spam Emails</h2>
+    {% if non_spam_emails %}
+      <table>
+        <thead>
+          <tr>
+            <th>Sender</th>
+            <th>Subject</th>
+            <th>Classification</th>
+            <th>Confidence</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for email in non_spam_emails %}
+          <tr>
+            <td>{{ email.sender }}</td>
+            <td>{{ email.subject }}</td>
+            <td>{{ email.classification }}</td>
+            <td>{{ email.confidence }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <p>No non-spam emails found.</p>
+    {% endif %}
+    
+    <p><a href="/">Back to Home</a></p>
+  </body>
+</html>

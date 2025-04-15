@@ -1,0 +1,19 @@
+chat:
+  greeting: "Hello! How can I help you today?"
+  farewell: "Goodbye! Hope to chat with you again soon."
+  fallback: "I'm sorry, I didn't quite understand that."
+
+completion:
+  default: "Please provide a detailed answer: {prompt_input}"
+  context_based: "Based on the context: {context}, respond to: {prompt_input}"
+
+few_shot:
+  examples:
+    - question: "What is artificial intelligence?"
+      answer: "Artificial Intelligence (AI) is the field of study that teaches computers to mimic human intelligence."
+    - question: "How do I train a BERT model?"
+      answer: "Training a BERT model typically involves fine-tuning on a specific dataset with appropriate hyperparameters."
+
+meta:
+  version: "1.0"
+  description: "Prompt templates to be used for chat responses, completions, and few-shot learning examples."

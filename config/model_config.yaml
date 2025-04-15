@@ -1,0 +1,40 @@
+split:
+  test_size: 0.2
+  validation_size: 0.1
+  random_state: 42
+
+pipeline:
+  task: "text-generation"
+  model_name: "EleutherAI/gpt-neo-1.3B"
+
+model:
+  name: "EleutherAI/gpt-neo-1.3B"  # Use Hugging Face models, or change to another model name
+  training:
+    epochs: 3
+    batch_size: 32
+    learning_rate: 2e-5
+    max_seq_length: 128
+
+tokenizer:
+  name: "EleutherAI/gpt-neo-1.3B"  # Typically matches the model name
+  do_lower_case: true
+  truncation: true
+  padding: "max_length"
+
+huggingface:
+  cache_dir: "~/.cache/huggingface"  # Override the default cache directory if needed
+  use_auth_token: false      
+
+logging:
+  level: "INFO"
+  log_file: "logs/training.log"
+
+
+  # for use
+  # Example snippet for loading YAML configuration
+# import yaml
+
+# with open("config/model_config.yaml", "r") as file:
+#     config = yaml.safe_load(file)
+
+# print(config)
