@@ -10,8 +10,8 @@ from imap_tools import MailBox, AND
 from transformers import pipeline, AutoTokenizer, AutoModelForCausalLM, AutoConfig
 
 # Initialize the tokenizer and model
-gpt_tokenizer = AutoTokenizer.from_pretrained("/Users/blairjdaniel/AI-Assistant-Springs/models/gpt")  # Replace "" with your model name if different
-gpt_model = AutoModelForCausalLM.from_pretrained("/Users/blairjdaniel/AI-Assistant-Springs/models/gpt")  # Replace "" with your model name if different
+gpt_tokenizer = AutoTokenizer.from_pretrained("/Users/blairjdaniel/Springs-AI/models/gpt")  # Replace "" with your model name if different
+gpt_model = AutoModelForCausalLM.from_pretrained("/Users/blairjdaniel/Springs-AI/models/gpt")  # Replace "" with your model name if different
 from dotenv import load_dotenv
 from apscheduler.schedulers.background import BackgroundScheduler
 from datetime import datetime, timedelta
@@ -26,6 +26,9 @@ from utils.helpers import extract_sender_name, send_email, process_email
 from utils.model_loader import load_gpt_model
 from utils.generate_response import generate_response
 
+# Import our Calendly functions and tour logger
+from calendly import fetch_calendly_events
+from src.app_scripts.tour_logger import log_tour_details
 
 # Load environment variables
 load_dotenv()
@@ -39,7 +42,7 @@ SPRINGS_EMAIL_PASSWORD = os.getenv("SPRINGS_EMAIL_PASSWORD")
 app = Flask(__name__)
 
 # Load baseline responses from YAML file
-with open("/Users/blairjdaniel/AI-Assistant-Springs/config/baseline_responses.yaml", "r") as f:
+with open("/Users/blairjdaniel/Springs-AI/config/baseline_responses.yaml", "r") as f:
     baseline_responses = yaml.safe_load(f)
 
 print("Loaded baseline_responses:", baseline_responses)
@@ -60,18 +63,17 @@ for category in label_mapping.values():
 @app.route("/fetch_calendly_tours", methods=["POST"])
 def fetch_calendly_tours():
     """
-    Trigger the Calendly app to fetch and log tours.
+    Fetch tours from Calendly and log them using tour_logger.
     """
-    calendly_app_url = "http://127.0.0.1:5001/log_calendly_tours"  # URL of the Calendly app
     try:
-        response = requests.post(calendly_app_url)
-        if response.status_code == 200:
-            result = response.json()
-            return render_template("check_emails.html", result=result["message"])
-        else:
-            return render_template("check_emails.html", result="Failed to fetch tours from Calendly.")
-    except requests.exceptions.RequestException as e:
-        return render_template("check_emails.html", result=f"Error: {e}")
+        events = fetch_calendly_events()
+        for event in events:
+            # Log each event using tour_logger.
+            log_tour_details(event, "sales@springsrv.com", datetime.now().isoformat())
+        result_message = f"Fetched and logged {len(events)} tour event(s)."
+    except Exception as e:
+        result_message = f"Error fetching or logging tours: {e}"
+    return render_template("check_emails.html", result=result_message)
 
 
 @app.route("/check_emails", methods=["GET", "POST"])
@@ -88,7 +90,7 @@ def check_emails():
 
     if request.method == "POST":
         # Specify the model path for DistilBERT
-        distilbert_model_path = "/Users/blairjdaniel/AI-Assistant-Springs/models/distilbert-email-classifier"
+        distilbert_model_path = "/Users/blairjdaniel/Springs-AI/models/distilbert-email-classifier"
 
         # Load the email classifier
         classifier = load_email_classifier(distilbert_model_path)

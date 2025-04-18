@@ -20,6 +20,10 @@
     <form method="post">
       <button type="submit">Check for New Emails</button>
     </form>
+      <!-- Button form to trigger fetching Calendly tours -->
+    <form id="fetchCalendlyForm" action="/fetch_calendly_tours" method="POST">
+      <button type="submit">Fetch Calendly Tours</button>
+    </form>
     <h2>Processed Emails</h2>
     {% if processed_emails %}
       <table>
@@ -48,15 +52,7 @@
     {% else %}
       <p>No emails processed.</p>
     {% endif %}
-    <!-- Button to fetch and log Calendly tours -->  
-    form action="/fetch_calendly_tours" method="post">
-        <button type="submit">Fetch and Log Calendly Tours</button>
-    </form>
-
-    <!-- Display result -->
-    {% if result %}
-        <p>{{ result }}</p>
-    {% endif %}
+    
     
     <p><a href="/">Back to Home</a></p>
   </body>
