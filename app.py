@@ -9,6 +9,7 @@ from flask import Flask, render_template, request
 from imap_tools import MailBox, AND
 from transformers import pipeline, AutoTokenizer, AutoModelForCausalLM, AutoConfig
 
+
 # Initialize the tokenizer and model
 gpt_tokenizer = AutoTokenizer.from_pretrained("/Users/blairjdaniel/Springs-AI/models/gpt")  # Replace "" with your model name if different
 gpt_model = AutoModelForCausalLM.from_pretrained("/Users/blairjdaniel/Springs-AI/models/gpt")  # Replace "" with your model name if different
@@ -29,6 +30,10 @@ from utils.generate_response import generate_response
 # Import our Calendly functions and tour logger
 from calendly import fetch_calendly_events
 from src.app_scripts.tour_logger import log_tour_details
+import openai
+
+# Set the OpenAI API key
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 # Load environment variables
 load_dotenv()
@@ -126,22 +131,23 @@ def check_emails():
 
                     tailored_response = generate_response(email_text, sender, email_category, gpt_tokenizer, gpt_model)
 
-                    result = process_email_and_generate_response(email_text, sender, gpt_tokenizer, gpt_model)
+                    #result = process_email_and_generate_response(email_text, sender, gpt_tokenizer, gpt_model)
 
-                    #Extract the responses and generated response
-                    extracted_response = result["responses"]
-                    generated_response = result["generated_response"]
+                    # #Extract the responses and generated response
+                    # extracted_response = result["responses"]
+                    # generated_response = result["generated_response"]
 
                     processed_emails.append({
                         "sender": sender,
                         "subject": subject,
                         "category": email_category,
                         "response": tailored_response,
-                        "tour_response": extracted_response.get("tour_response"),
-                        "ask_response": extracted_response.get("ask_response")
+                        "openai_response": None
+                        # "tour_response": extracted_response.get("tour_response"),
+                        # "ask_response": extracted_response.get("ask_response")
                     })
 
-                    print(f"Processed email with generated response:\n{generated_response}")
+                    # print(f"Processed email with generated response:\n{generated_response}")
                     
 
                     if not TEST_MODE:
@@ -151,7 +157,70 @@ def check_emails():
 
     return render_template("check_emails.html", result=result, processed_emails=processed_emails, baseline_responses=baseline_responses)
 
+@app.route("/openai_reply", methods=["POST"])
+def openai_reply():
+    """
+    Generate a reply using OpenAI assistant for a specific email.
+    """
+    try:
+        # Get email content and sender from the request
+        email_text = request.form.get("email_text", "")
+        sender = request.form.get("sender", "")
+        if not email_text or not sender:
+            return {"error": "Missing email content or sender"}, 400
 
+        # Call OpenAI's API to generate a reply
+        response = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo",
+             messages=[
+                {"role": "system", "content": (
+                    "You are a friendly, professional sales assistant at Springs RV Resort. " 
+                    "Always include the Calendly scheduling link (https://calendly.com/springsrv) in your responses. "
+                    "Format your reply similar to the following YAML baseline responses."
+                )},
+                {"role": "system", "content": (
+                    "Example baseline response:\n"
+                    "subject: Re: Contact\n"
+                    "body: |\n"
+                    "  Hi {{customer_name}},\n"
+                    "  Thank you for reaching out. Please use the following link to schedule a tour: https://calendly.com/springsrv\n"
+                    "  We look forward to welcoming you at Springs RV Resort.\n"
+                    "  Best regards,\n"
+                    "  Kelsey\n"
+                )},
+                {"role": "user", "content": f"Write a reply email to the following customer inquiry as the sales assistant: {email_text}"}
+    ],
+            max_tokens=250,
+            temperature=0.7
+)
+
+        print(response)
+
+        assistant_reply = response['choices'][0]['message']['content'].strip()
+
+        return {"reply": assistant_reply}, 200
+    except Exception as e:
+        print(f"Error generating OpenAI reply: {e}")
+        return {"error": str(e)}, 500
+    
+@app.route("/send_email", methods=["POST"])
+def send_email_route():
+    """
+    Send an email reply to the original sender.
+    """
+    try:
+        recipient = request.form.get("recipient", "")
+        subject = request.form.get("subject", "")
+        body = request.form.get("body", "")
+        if not recipient or not subject or not body:
+            return {"error": "Missing recipient, subject, or body"}, 400
+
+        # Call the send_email helper function.
+        send_email(recipient, subject, body)
+        return {"status": "Email sent successfully"}, 200
+    except Exception as e:
+        print(f"Error sending email: {e}")
+        return {"error": str(e)}, 500
 
 if __name__ == "__main__":
     app.run(debug=True)

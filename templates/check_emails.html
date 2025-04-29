@@ -10,6 +10,10 @@
       th { background-color: #f2f2f2; }
       h1, h2 { margin-top: 20px; }
       form { margin-bottom: 20px; }
+      .edit-response-container, .openai-container, .send-email-container { margin: 5px 0; }
+      .response-display { padding: 5px; background: #f9f9f9; }
+      .response-editor { padding: 5px; }
+      button { margin: 2px; }
     </style>
   </head>
   <body>
@@ -17,10 +21,11 @@
     {% if result %}
       <p><strong>{{ result }}</strong></p>
     {% endif %}
+    <!-- Check for New Emails Form -->
     <form method="post">
       <button type="submit">Check for New Emails</button>
     </form>
-      <!-- Button form to trigger fetching Calendly tours -->
+    <!-- Fetch Calendly Tours Form -->
     <form id="fetchCalendlyForm" action="/fetch_calendly_tours" method="POST">
       <button type="submit">Fetch Calendly Tours</button>
     </form>
@@ -32,6 +37,10 @@
             <th>Sender</th>
             <th>Subject</th>
             <th>Response</th>
+            <th>Category</th>
+            <th>OpenAI Response</th>
+            <th>Edit Response</th>
+            <th>Send Email</th>
           </tr>
         </thead>
         <tbody>
@@ -39,11 +48,44 @@
           <tr>
             <td>{{ email.sender }}</td>
             <td>{{ email.subject }}</td>
+            <td>{{ email.category }}</td>
+            <td>{{ email.response }}</td>
             <td>
-              {{ email.response }}
-              {% if "reschedule" in email.subject.lower() or "cancel" in email.subject.lower() %}
-              <br><strong>Note:</strong> This response was generated for a rescheduling or cancellation request.
-              {% endif %}
+              <div class="openai-container">
+                {% if email.openai_response %}
+                  <p><strong>OpenAI Response:</strong> {{ email.openai_response }}</p>
+                {% else %}
+                  <form class="openai-reply-form" method="POST" action="/openai_reply">
+                    <input type="hidden" name="email_text" value="{{ email.response }}">
+                    <input type="hidden" name="sender" value="{{ email.sender }}">
+                    <button type="submit">Use OpenAI Assistant</button>
+                  </form>
+                  <div class="openai-reply-result"></div>
+                {% endif %}
+              </div>
+            </td>
+            <td>
+              <div class="edit-response-container">
+                <div class="response-display">
+                  {{ email.openai_response or email.response }}
+                </div>
+                <textarea class="response-editor" style="display:none; width:100%;">{{ email.openai_response or email.response }}</textarea>
+                <button type="button" class="edit-btn">Edit Email</button>
+              </div>
+            </td>
+            <td>
+              <div class="send-email-container">
+                <form class="send-email-form" method="POST" action="/send_email">
+                  <input type="hidden" name="recipient" value="{{ email.sender }}">
+                  <input type="hidden" name="subject" value="Re: {{ email.subject }}">
+                  <!-- Hidden field; will be updated when editing -->
+                  <input type="hidden" name="body" class="send-body" value="{{ email.openai_response or email.response }}">
+                  <button type="submit">Send Email</button>
+                  <!-- Open Gmail Compose button -->
+                  <button type="button" class="open-gmail-btn">Open Gmail Compose</button>
+                </form>
+                <div class="send-email-result"></div>
+              </div>
             </td>
           </tr>
           {% endfor %}
@@ -53,6 +95,116 @@
       <p>No emails processed.</p>
     {% endif %}
     
+    <script>
+      // Handle OpenAI reply button dynamically
+      document.querySelectorAll('.openai-reply-form').forEach(form => {
+        form.addEventListener('submit', async function(event) {
+          event.preventDefault();
+          const formData = new FormData(form);
+          // Assumes the result container is the immediate next sibling.
+          const responseDiv = form.nextElementSibling;
+    
+          try {
+            const response = await fetch(form.action, {
+              method: 'POST',
+              body: formData
+            });
+            const data = await response.json();
+            if (data.reply) {
+              responseDiv.innerHTML = `<p><strong>OpenAI Reply:</strong> ${data.reply}</p>`;
+            } else {
+              responseDiv.innerHTML = `<p><strong>Error:</strong> ${data.error}</p>`;
+            }
+          } catch (error) {
+            responseDiv.innerHTML = `<p><strong>Error:</strong> ${error.message}</p>`;
+          }
+        });
+      });
+    
+      // Handle Edit Response toggle
+      document.querySelectorAll('.edit-btn').forEach(button => {
+        button.addEventListener('click', function(){
+          const container = button.closest('.edit-response-container');
+          const displayDiv = container.querySelector('.response-display');
+          const textarea = container.querySelector('.response-editor');
+          const row = button.closest('tr');
+          const sendBodyInput = row.querySelector('.send-body');
+    
+          if (textarea.style.display === 'none' || textarea.style.display === '') {
+            // Enable editing: show textarea, hide display text
+            textarea.style.display = 'block';
+            displayDiv.style.display = 'none';
+            button.innerText = 'Cancel Edit';
+          } else {
+            // Cancel editing: hide textarea, show display text
+            textarea.style.display = 'none';
+            displayDiv.style.display = 'block';
+            // Revert textarea value if needed
+            textarea.value = displayDiv.innerText;
+            button.innerText = 'Edit Email';
+          }
+          // Update the hidden send-body field with the current value.
+          sendBodyInput.value = (textarea.style.display === 'block') ? textarea.value : displayDiv.innerText;
+        });
+      });
+    
+      // When the send-email form is submitted, update the send-body field
+      document.querySelectorAll('.send-email-form').forEach(form => {
+        form.addEventListener('submit', function(event) {
+          const row = form.closest('tr');
+          const textarea = row.querySelector('.response-editor');
+          if (textarea && textarea.style.display === 'block') {
+            form.querySelector('.send-body').value = textarea.value;
+          }
+        });
+      });
+    
+      // Handle Send Email forms with confirmation
+      document.querySelectorAll('.send-email-form').forEach(form => {
+        form.addEventListener('submit', async function(event) {
+          event.preventDefault();
+    
+          if (!confirm("Are you sure you want to send this email?")) {
+            return;
+          }
+    
+          const formData = new FormData(form);
+          const responseDiv = form.nextElementSibling;
+    
+          try {
+            const response = await fetch(form.action, {
+              method: 'POST',
+              body: formData
+            });
+            const data = await response.json();
+            if (data.status) {
+              responseDiv.innerHTML = `<p><strong>Status:</strong> ${data.status}</p>`;
+            } else {
+              responseDiv.innerHTML = `<p><strong>Error:</strong> ${data.error}</p>`;
+            }
+          } catch (error) {
+            responseDiv.innerHTML = `<p><strong>Error:</strong> ${error.message}</p>`;
+          }
+        });
+      });
+    
+      // Handle Open Gmail Compose button
+      document.querySelectorAll('.open-gmail-btn').forEach(button => {
+        button.addEventListener('click', function(){
+          const row = button.closest('tr');
+          const recipient = encodeURIComponent(row.querySelector('td:nth-child(1)').innerText.trim());
+          const subject = encodeURIComponent("Re: " + row.querySelector('td:nth-child(2)').innerText.trim());
+          const body = encodeURIComponent(row.querySelector('.send-body').value);
+    
+          const gmailUrl = "https://mail.google.com/mail/?view=cm&fs=1" +
+            "&to=" + recipient +
+            "&su=" + subject +
+            "&body=" + body;
+    
+          window.open(gmailUrl, '_blank');
+        });
+      });
+    </script>
     
     <p><a href="/">Back to Home</a></p>
   </body>

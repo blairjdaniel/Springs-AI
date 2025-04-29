@@ -862,5 +862,869 @@
         "date": "2025-04-17T17:27:49.759979",
         "tour_date": "2024-03-09",
         "tour_time": "23:30"
+    },
+    {
+        "subscription": {
+            "calendar_event": {
+                "external_id": "cf592s2re3j119nm6g9q5hjueg",
+                "kind": "google"
+            },
+            "created_at": "2023-09-03T21:33:38.665773Z",
+            "end_time": "2023-09-10T18:45:00.000000Z",
+            "event_guests": [],
+            "event_memberships": [
+                {
+                    "buffered_end_time": "2023-09-10T19:00:00.000000Z",
+                    "buffered_start_time": "2023-09-10T17:45:00.000000Z",
+                    "user": "https://api.calendly.com/users/c94ef0bf-4139-4fbd-9775-7fad5080ebd1",
+                    "user_email": "sales@springsrv.com",
+                    "user_name": "Springs RV Resort"
+                }
+            ],
+            "event_type": "https://api.calendly.com/event_types/ea14eb00-1940-44c6-9dad-07190da6b877",
+            "invitees_counter": {
+                "active": 1,
+                "limit": 1,
+                "total": 1
+            },
+            "location": {
+                "additional_info": "",
+                "location": "670 Hot Springs Rd., Harrison Hot Springs, BC",
+                "type": "physical"
+            },
+            "meeting_notes_html": null,
+            "meeting_notes_plain": null,
+            "name": "Springs RV Resort Tour ",
+            "start_time": "2023-09-10T18:00:00.000000Z",
+            "status": "active",
+            "updated_at": "2023-09-03T21:33:39.567330Z",
+            "uri": "https://api.calendly.com/scheduled_events/0e4fe7e2-aaf2-441c-be2e-86f852a805c3"
+        },
+        "email": "sales@springsrv.com",
+        "date": "2025-04-29T09:25:21.647590",
+        "tour_date": "2023-09-10",
+        "tour_time": "18:00"
+    },
+    {
+        "subscription": {
+            "calendar_event": {
+                "external_id": "3fmuv9bb1fie72d76dh2l4uaqg",
+                "kind": "google"
+            },
+            "created_at": "2024-01-28T14:58:02.147943Z",
+            "end_time": "2024-02-22T19:45:00.000000Z",
+            "event_guests": [],
+            "event_memberships": [
+                {
+                    "buffered_end_time": "2024-02-22T20:00:00.000000Z",
+                    "buffered_start_time": "2024-02-22T18:45:00.000000Z",
+                    "user": "https://api.calendly.com/users/c94ef0bf-4139-4fbd-9775-7fad5080ebd1",
+                    "user_email": "sales@springsrv.com",
+                    "user_name": "Springs RV Resort"
+                }
+            ],
+            "event_type": "https://api.calendly.com/event_types/ea14eb00-1940-44c6-9dad-07190da6b877",
+            "invitees_counter": {
+                "active": 1,
+                "limit": 1,
+                "total": 1
+            },
+            "location": {
+                "additional_info": "",
+                "location": "670 Hot Springs Rd., Harrison Hot Springs, BC",
+                "type": "physical"
+            },
+            "meeting_notes_html": null,
+            "meeting_notes_plain": null,
+            "name": "Springs RV Resort Sales Meeting ",
+            "start_time": "2024-02-22T19:00:00.000000Z",
+            "status": "active",
+            "updated_at": "2024-01-28T14:58:02.990912Z",
+            "uri": "https://api.calendly.com/scheduled_events/a8697da6-6bce-4ded-a7af-bc8ead35aade"
+        },
+        "email": "sales@springsrv.com",
+        "date": "2025-04-29T09:25:22.168894",
+        "tour_date": "2024-02-22",
+        "tour_time": "19:00"
+    },
+    {
+        "subscription": {
+            "calendar_event": {
+                "external_id": "2umh05afo5ij8f1k087vqdm364",
+                "kind": "google"
+            },
+            "created_at": "2024-02-06T06:52:58.717964Z",
+            "end_time": "2024-02-23T23:45:00.000000Z",
+            "event_guests": [],
+            "event_memberships": [
+                {
+                    "buffered_end_time": "2024-02-24T00:00:00.000000Z",
+                    "buffered_start_time": "2024-02-23T22:45:00.000000Z",
+                    "user": "https://api.calendly.com/users/c94ef0bf-4139-4fbd-9775-7fad5080ebd1",
+                    "user_email": "sales@springsrv.com",
+                    "user_name": "Springs RV Resort"
+                }
+            ],
+            "event_type": "https://api.calendly.com/event_types/ea14eb00-1940-44c6-9dad-07190da6b877",
+            "invitees_counter": {
+                "active": 1,
+                "limit": 1,
+                "total": 1
+            },
+            "location": {
+                "additional_info": "",
+                "location": "670 Hot Springs Rd., Harrison Hot Springs, BC",
+                "type": "physical"
+            },
+            "meeting_notes_html": null,
+            "meeting_notes_plain": null,
+            "name": "Springs RV Resort Sales Meeting ",
+            "start_time": "2024-02-23T23:00:00.000000Z",
+            "status": "active",
+            "updated_at": "2024-02-06T06:52:59.725714Z",
+            "uri": "https://api.calendly.com/scheduled_events/880a11f0-9d70-4ae8-9db5-84c87df1c8b1"
+        },
+        "email": "sales@springsrv.com",
+        "date": "2025-04-29T09:25:22.184438",
+        "tour_date": "2024-02-23",
+        "tour_time": "23:00"
+    },
+    {
+        "subscription": {
+            "calendar_event": {
+                "external_id": "um841421oftgoetn17lblmuiv8",
+                "kind": "google"
+            },
+            "created_at": "2024-02-16T07:03:55.669174Z",
+            "end_time": "2024-03-03T22:45:00.000000Z",
+            "event_guests": [
+                {
+                    "created_at": "2024-02-16T07:03:55.713212Z",
+                    "email": "santeria@gmail.com",
+                    "updated_at": "2024-02-16T07:03:55.713212Z"
+                }
+            ],
+            "event_memberships": [
+                {
+                    "buffered_end_time": "2024-03-03T23:00:00.000000Z",
+                    "buffered_start_time": "2024-03-03T21:45:00.000000Z",
+                    "user": "https://api.calendly.com/users/c94ef0bf-4139-4fbd-9775-7fad5080ebd1",
+                    "user_email": "sales@springsrv.com",
+                    "user_name": "Springs RV Resort"
+                }
+            ],
+            "event_type": "https://api.calendly.com/event_types/ea14eb00-1940-44c6-9dad-07190da6b877",
+            "invitees_counter": {
+                "active": 1,
+                "limit": 1,
+                "total": 1
+            },
+            "location": {
+                "additional_info": "",
+                "location": "670 Hot Springs Rd., Harrison Hot Springs, BC",
+                "type": "physical"
+            },
+            "meeting_notes_html": null,
+            "meeting_notes_plain": null,
+            "name": "Springs RV Resort Sales Meeting ",
+            "start_time": "2024-03-03T22:00:00.000000Z",
+            "status": "active",
+            "updated_at": "2024-02-16T07:04:00.287811Z",
+            "uri": "https://api.calendly.com/scheduled_events/6a0f094c-b205-489f-9bea-791569705f0a"
+        },
+        "email": "sales@springsrv.com",
+        "date": "2025-04-29T09:25:22.205248",
+        "tour_date": "2024-03-03",
+        "tour_time": "22:00"
+    },
+    {
+        "subscription": {
+            "calendar_event": {
+                "external_id": "gimebq4mn4fn5m12ph9fa109p0",
+                "kind": "google"
+            },
+            "created_at": "2024-02-19T22:45:36.756394Z",
+            "end_time": "2024-02-24T19:45:00.000000Z",
+            "event_guests": [
+                {
+                    "created_at": "2024-02-19T22:45:36.830059Z",
+                    "email": "saeichele@shaw.ca",
+                    "updated_at": "2024-02-19T22:45:36.830059Z"
+                }
+            ],
+            "event_memberships": [
+                {
+                    "buffered_end_time": "2024-02-24T20:00:00.000000Z",
+                    "buffered_start_time": "2024-02-24T18:45:00.000000Z",
+                    "user": "https://api.calendly.com/users/c94ef0bf-4139-4fbd-9775-7fad5080ebd1",
+                    "user_email": "sales@springsrv.com",
+                    "user_name": "Springs RV Resort"
+                }
+            ],
+            "event_type": "https://api.calendly.com/event_types/ea14eb00-1940-44c6-9dad-07190da6b877",
+            "invitees_counter": {
+                "active": 1,
+                "limit": 1,
+                "total": 1
+            },
+            "location": {
+                "additional_info": "",
+                "location": "670 Hot Springs Rd., Harrison Hot Springs, BC",
+                "type": "physical"
+            },
+            "meeting_notes_html": null,
+            "meeting_notes_plain": null,
+            "name": "Springs RV Resort Sales Meeting ",
+            "start_time": "2024-02-24T19:00:00.000000Z",
+            "status": "active",
+            "updated_at": "2024-02-19T22:45:37.785434Z",
+            "uri": "https://api.calendly.com/scheduled_events/5a2d8cba-b7f5-4c32-84e1-239712efd203"
+        },
+        "email": "sales@springsrv.com",
+        "date": "2025-04-29T09:25:22.222770",
+        "tour_date": "2024-02-24",
+        "tour_time": "19:00"
+    },
+    {
+        "subscription": {
+            "calendar_event": {
+                "external_id": "50ar53mnst90729hju7ua489u4",
+                "kind": "google"
+            },
+            "cancellation": {
+                "canceled_by": "Test",
+                "canceler_type": "invitee",
+                "created_at": "2024-02-22T15:22:55.602411Z",
+                "reason": "test"
+            },
+            "created_at": "2024-02-22T05:34:02.420350Z",
+            "end_time": "2024-02-24T21:45:00.000000Z",
+            "event_guests": [],
+            "event_memberships": [
+                {
+                    "buffered_end_time": "2024-02-24T22:00:00.000000Z",
+                    "buffered_start_time": "2024-02-24T20:45:00.000000Z",
+                    "user": "https://api.calendly.com/users/c94ef0bf-4139-4fbd-9775-7fad5080ebd1",
+                    "user_email": "sales@springsrv.com",
+                    "user_name": "Springs RV Resort"
+                }
+            ],
+            "event_type": "https://api.calendly.com/event_types/ea14eb00-1940-44c6-9dad-07190da6b877",
+            "invitees_counter": {
+                "active": 0,
+                "limit": 1,
+                "total": 1
+            },
+            "location": {
+                "additional_info": "",
+                "location": "670 Hot Springs Rd., Harrison Hot Springs, BC",
+                "type": "physical"
+            },
+            "meeting_notes_html": null,
+            "meeting_notes_plain": null,
+            "name": "Springs RV Resort Sales Meeting ",
+            "start_time": "2024-02-24T21:00:00.000000Z",
+            "status": "canceled",
+            "updated_at": "2024-02-22T15:22:56.577263Z",
+            "uri": "https://api.calendly.com/scheduled_events/f61ae6cf-a590-40ee-98a7-0ec4aa16ca58"
+        },
+        "email": "sales@springsrv.com",
+        "date": "2025-04-29T09:25:22.277097",
+        "tour_date": "2024-02-24",
+        "tour_time": "21:00"
+    },
+    {
+        "subscription": {
+            "calendar_event": {
+                "external_id": "p8rh7cnl47t2snh030iakf7ufs",
+                "kind": "google"
+            },
+            "created_at": "2024-02-23T01:42:09.615869Z",
+            "end_time": "2024-02-24T22:45:00.000000Z",
+            "event_guests": [],
+            "event_memberships": [
+                {
+                    "buffered_end_time": "2024-02-24T23:00:00.000000Z",
+                    "buffered_start_time": "2024-02-24T21:45:00.000000Z",
+                    "user": "https://api.calendly.com/users/c94ef0bf-4139-4fbd-9775-7fad5080ebd1",
+                    "user_email": "sales@springsrv.com",
+                    "user_name": "Springs RV Resort"
+                }
+            ],
+            "event_type": "https://api.calendly.com/event_types/ea14eb00-1940-44c6-9dad-07190da6b877",
+            "invitees_counter": {
+                "active": 1,
+                "limit": 1,
+                "total": 1
+            },
+            "location": {
+                "additional_info": "",
+                "location": "670 Hot Springs Rd., Harrison Hot Springs, BC",
+                "type": "physical"
+            },
+            "meeting_notes_html": null,
+            "meeting_notes_plain": null,
+            "name": "Springs RV Resort Sales Meeting ",
+            "start_time": "2024-02-24T22:00:00.000000Z",
+            "status": "active",
+            "updated_at": "2024-02-23T01:42:11.062954Z",
+            "uri": "https://api.calendly.com/scheduled_events/2df768ad-519f-46e4-b0f7-7ac9ed4e2fd3"
+        },
+        "email": "sales@springsrv.com",
+        "date": "2025-04-29T09:25:22.303069",
+        "tour_date": "2024-02-24",
+        "tour_time": "22:00"
+    },
+    {
+        "subscription": {
+            "calendar_event": {
+                "external_id": "ac4fp03acvr5fdm22j7hs6enq4",
+                "kind": "google"
+            },
+            "cancellation": {
+                "canceled_by": "Springs RV Resort",
+                "canceler_type": "host",
+                "created_at": "2024-02-24T04:45:47.999302Z",
+                "reason": null
+            },
+            "created_at": "2024-02-23T02:09:48.249474Z",
+            "end_time": "2024-02-24T21:15:00.000000Z",
+            "event_guests": [],
+            "event_memberships": [
+                {
+                    "buffered_end_time": "2024-02-24T21:30:00.000000Z",
+                    "buffered_start_time": "2024-02-24T20:15:00.000000Z",
+                    "user": "https://api.calendly.com/users/c94ef0bf-4139-4fbd-9775-7fad5080ebd1",
+                    "user_email": "sales@springsrv.com",
+                    "user_name": "Springs RV Resort"
+                }
+            ],
+            "event_type": "https://api.calendly.com/event_types/ea14eb00-1940-44c6-9dad-07190da6b877",
+            "invitees_counter": {
+                "active": 0,
+                "limit": 1,
+                "total": 1
+            },
+            "location": {
+                "additional_info": "",
+                "location": "670 Hot Springs Rd., Harrison Hot Springs, BC",
+                "type": "physical"
+            },
+            "meeting_notes_html": null,
+            "meeting_notes_plain": null,
+            "name": "Springs RV Resort Sales Meeting ",
+            "start_time": "2024-02-24T20:30:00.000000Z",
+            "status": "canceled",
+            "updated_at": "2024-02-24T04:45:48.798441Z",
+            "uri": "https://api.calendly.com/scheduled_events/3d10dc58-d399-47dd-909c-bdd3f9f6818d"
+        },
+        "email": "sales@springsrv.com",
+        "date": "2025-04-29T09:25:22.324129",
+        "tour_date": "2024-02-24",
+        "tour_time": "20:30"
+    },
+    {
+        "subscription": {
+            "calendar_event": {
+                "external_id": "9eklv07d4cdpbdu5hdf3isi19o",
+                "kind": "google"
+            },
+            "created_at": "2024-02-23T03:26:25.988688Z",
+            "end_time": "2024-02-25T00:15:00.000000Z",
+            "event_guests": [],
+            "event_memberships": [
+                {
+                    "buffered_end_time": "2024-02-25T00:30:00.000000Z",
+                    "buffered_start_time": "2024-02-24T23:15:00.000000Z",
+                    "user": "https://api.calendly.com/users/c94ef0bf-4139-4fbd-9775-7fad5080ebd1",
+                    "user_email": "sales@springsrv.com",
+                    "user_name": "Springs RV Resort"
+                }
+            ],
+            "event_type": "https://api.calendly.com/event_types/ea14eb00-1940-44c6-9dad-07190da6b877",
+            "invitees_counter": {
+                "active": 1,
+                "limit": 1,
+                "total": 1
+            },
+            "location": {
+                "additional_info": "",
+                "location": "670 Hot Springs Rd., Harrison Hot Springs, BC",
+                "type": "physical"
+            },
+            "meeting_notes_html": null,
+            "meeting_notes_plain": null,
+            "name": "Springs RV Resort Sales Meeting ",
+            "start_time": "2024-02-24T23:30:00.000000Z",
+            "status": "active",
+            "updated_at": "2024-02-23T03:26:27.042279Z",
+            "uri": "https://api.calendly.com/scheduled_events/63a74544-43c9-4aa5-a9cd-cd50eedb040d"
+        },
+        "email": "sales@springsrv.com",
+        "date": "2025-04-29T09:25:22.345573",
+        "tour_date": "2024-02-24",
+        "tour_time": "23:30"
+    },
+    {
+        "subscription": {
+            "calendar_event": {
+                "external_id": "scmpv3d5lp3vhtvvkbipnmuesk",
+                "kind": "google"
+            },
+            "created_at": "2024-02-23T03:41:46.842919Z",
+            "end_time": "2024-03-02T23:45:00.000000Z",
+            "event_guests": [],
+            "event_memberships": [
+                {
+                    "buffered_end_time": "2024-03-03T00:00:00.000000Z",
+                    "buffered_start_time": "2024-03-02T22:45:00.000000Z",
+                    "user": "https://api.calendly.com/users/c94ef0bf-4139-4fbd-9775-7fad5080ebd1",
+                    "user_email": "sales@springsrv.com",
+                    "user_name": "Springs RV Resort"
+                }
+            ],
+            "event_type": "https://api.calendly.com/event_types/ea14eb00-1940-44c6-9dad-07190da6b877",
+            "invitees_counter": {
+                "active": 1,
+                "limit": 1,
+                "total": 1
+            },
+            "location": {
+                "additional_info": "",
+                "location": "670 Hot Springs Rd., Harrison Hot Springs, BC",
+                "type": "physical"
+            },
+            "meeting_notes_html": null,
+            "meeting_notes_plain": null,
+            "name": "Springs RV Resort Sales Meeting ",
+            "start_time": "2024-03-02T23:00:00.000000Z",
+            "status": "active",
+            "updated_at": "2024-02-23T03:41:48.145669Z",
+            "uri": "https://api.calendly.com/scheduled_events/f4c4da57-c5e1-4eff-bc97-54884f186ecd"
+        },
+        "email": "sales@springsrv.com",
+        "date": "2025-04-29T09:25:22.371827",
+        "tour_date": "2024-03-02",
+        "tour_time": "23:00"
+    },
+    {
+        "subscription": {
+            "calendar_event": {
+                "external_id": "huu79k2831450qe7k7ts46a3qg",
+                "kind": "google"
+            },
+            "created_at": "2024-02-24T01:52:49.889256Z",
+            "end_time": "2024-02-28T23:00:00.000000Z",
+            "event_guests": [],
+            "event_memberships": [
+                {
+                    "buffered_end_time": "2024-02-28T23:15:00.000000Z",
+                    "buffered_start_time": "2024-02-28T21:15:00.000000Z",
+                    "user": "https://api.calendly.com/users/c94ef0bf-4139-4fbd-9775-7fad5080ebd1",
+                    "user_email": "sales@springsrv.com",
+                    "user_name": "Springs RV Resort"
+                }
+            ],
+            "event_type": "https://api.calendly.com/event_types/ea14eb00-1940-44c6-9dad-07190da6b877",
+            "invitees_counter": {
+                "active": 1,
+                "limit": 1,
+                "total": 1
+            },
+            "location": {
+                "additional_info": "",
+                "location": "670 Hot Springs Rd., Harrison Hot Springs, BC",
+                "type": "physical"
+            },
+            "meeting_notes_html": null,
+            "meeting_notes_plain": null,
+            "name": "Springs RV Resort Sales Meeting ",
+            "start_time": "2024-02-28T21:30:00.000000Z",
+            "status": "active",
+            "updated_at": "2024-02-24T01:52:50.878295Z",
+            "uri": "https://api.calendly.com/scheduled_events/445507e1-405b-40bf-b96f-a8882a9b195b"
+        },
+        "email": "sales@springsrv.com",
+        "date": "2025-04-29T09:25:22.391015",
+        "tour_date": "2024-02-28",
+        "tour_time": "21:30"
+    },
+    {
+        "subscription": {
+            "calendar_event": {
+                "external_id": "s5hoig2ehqf77n2vffah014ejs",
+                "kind": "google"
+            },
+            "created_at": "2024-02-25T20:34:59.850903Z",
+            "end_time": "2024-02-29T21:30:00.000000Z",
+            "event_guests": [],
+            "event_memberships": [
+                {
+                    "buffered_end_time": "2024-02-29T21:45:00.000000Z",
+                    "buffered_start_time": "2024-02-29T19:45:00.000000Z",
+                    "user": "https://api.calendly.com/users/c94ef0bf-4139-4fbd-9775-7fad5080ebd1",
+                    "user_email": "sales@springsrv.com",
+                    "user_name": "Springs RV Resort"
+                }
+            ],
+            "event_type": "https://api.calendly.com/event_types/ea14eb00-1940-44c6-9dad-07190da6b877",
+            "invitees_counter": {
+                "active": 1,
+                "limit": 1,
+                "total": 1
+            },
+            "location": {
+                "additional_info": "",
+                "location": "670 Hot Springs Rd., Harrison Hot Springs, BC",
+                "type": "physical"
+            },
+            "meeting_notes_html": null,
+            "meeting_notes_plain": null,
+            "name": "Springs RV Resort Sales Meeting ",
+            "start_time": "2024-02-29T20:00:00.000000Z",
+            "status": "active",
+            "updated_at": "2024-02-25T20:35:01.193387Z",
+            "uri": "https://api.calendly.com/scheduled_events/77dadd76-814e-45cb-9d77-0ac762d277e8"
+        },
+        "email": "sales@springsrv.com",
+        "date": "2025-04-29T09:25:22.409871",
+        "tour_date": "2024-02-29",
+        "tour_time": "20:00"
+    },
+    {
+        "subscription": {
+            "calendar_event": {
+                "external_id": "ohh7m1g0kqdl3hrjm3tvb5d3js",
+                "kind": "google"
+            },
+            "created_at": "2024-02-25T21:57:09.863641Z",
+            "end_time": "2024-02-26T19:30:00.000000Z",
+            "event_guests": [],
+            "event_memberships": [
+                {
+                    "buffered_end_time": "2024-02-26T19:45:00.000000Z",
+                    "buffered_start_time": "2024-02-26T17:45:00.000000Z",
+                    "user": "https://api.calendly.com/users/c94ef0bf-4139-4fbd-9775-7fad5080ebd1",
+                    "user_email": "sales@springsrv.com",
+                    "user_name": "Springs RV Resort"
+                }
+            ],
+            "event_type": "https://api.calendly.com/event_types/ea14eb00-1940-44c6-9dad-07190da6b877",
+            "invitees_counter": {
+                "active": 1,
+                "limit": 1,
+                "total": 1
+            },
+            "location": {
+                "additional_info": "",
+                "location": "670 Hot Springs Rd., Harrison Hot Springs, BC",
+                "type": "physical"
+            },
+            "meeting_notes_html": null,
+            "meeting_notes_plain": null,
+            "name": "Springs RV Resort Sales Meeting ",
+            "start_time": "2024-02-26T18:00:00.000000Z",
+            "status": "active",
+            "updated_at": "2024-02-25T21:57:10.809735Z",
+            "uri": "https://api.calendly.com/scheduled_events/5a6ea499-108c-4fb7-a706-dba3a7b7b4e7"
+        },
+        "email": "sales@springsrv.com",
+        "date": "2025-04-29T09:25:22.431478",
+        "tour_date": "2024-02-26",
+        "tour_time": "18:00"
+    },
+    {
+        "subscription": {
+            "calendar_event": {
+                "external_id": "69pl1fkr2tl7u870fqncb1s85o",
+                "kind": "google"
+            },
+            "created_at": "2024-02-26T21:35:04.021352Z",
+            "end_time": "2024-03-09T20:30:00.000000Z",
+            "event_guests": [],
+            "event_memberships": [
+                {
+                    "buffered_end_time": "2024-03-09T20:45:00.000000Z",
+                    "buffered_start_time": "2024-03-09T18:45:00.000000Z",
+                    "user": "https://api.calendly.com/users/c94ef0bf-4139-4fbd-9775-7fad5080ebd1",
+                    "user_email": "sales@springsrv.com",
+                    "user_name": "Springs RV Resort"
+                }
+            ],
+            "event_type": "https://api.calendly.com/event_types/ea14eb00-1940-44c6-9dad-07190da6b877",
+            "invitees_counter": {
+                "active": 1,
+                "limit": 1,
+                "total": 1
+            },
+            "location": {
+                "additional_info": "",
+                "location": "670 Hot Springs Rd., Harrison Hot Springs, BC",
+                "type": "physical"
+            },
+            "meeting_notes_html": null,
+            "meeting_notes_plain": null,
+            "name": "Springs RV Resort Sales Meeting ",
+            "start_time": "2024-03-09T19:00:00.000000Z",
+            "status": "active",
+            "updated_at": "2024-02-26T21:35:05.513232Z",
+            "uri": "https://api.calendly.com/scheduled_events/4a7acc3d-6e1a-455f-b3bc-e67a9ed4ace8"
+        },
+        "email": "sales@springsrv.com",
+        "date": "2025-04-29T09:25:22.453908",
+        "tour_date": "2024-03-09",
+        "tour_time": "19:00"
+    },
+    {
+        "subscription": {
+            "calendar_event": {
+                "external_id": "tr5pptffhe0fr0gtst2hv9s1tc",
+                "kind": "google"
+            },
+            "created_at": "2024-02-27T02:00:26.595743Z",
+            "end_time": "2024-03-04T01:00:00.000000Z",
+            "event_guests": [],
+            "event_memberships": [
+                {
+                    "buffered_end_time": "2024-03-04T01:15:00.000000Z",
+                    "buffered_start_time": "2024-03-03T23:15:00.000000Z",
+                    "user": "https://api.calendly.com/users/c94ef0bf-4139-4fbd-9775-7fad5080ebd1",
+                    "user_email": "sales@springsrv.com",
+                    "user_name": "Springs RV Resort"
+                }
+            ],
+            "event_type": "https://api.calendly.com/event_types/ea14eb00-1940-44c6-9dad-07190da6b877",
+            "invitees_counter": {
+                "active": 1,
+                "limit": 1,
+                "total": 1
+            },
+            "location": {
+                "additional_info": "",
+                "location": "670 Hot Springs Rd., Harrison Hot Springs, BC",
+                "type": "physical"
+            },
+            "meeting_notes_html": null,
+            "meeting_notes_plain": null,
+            "name": "Springs RV Resort Sales Meeting ",
+            "start_time": "2024-03-03T23:30:00.000000Z",
+            "status": "active",
+            "updated_at": "2024-02-27T02:00:27.585313Z",
+            "uri": "https://api.calendly.com/scheduled_events/5cb11bdd-01e6-4aa8-b38b-caab6b39935c"
+        },
+        "email": "sales@springsrv.com",
+        "date": "2025-04-29T09:25:22.473938",
+        "tour_date": "2024-03-03",
+        "tour_time": "23:30"
+    },
+    {
+        "subscription": {
+            "calendar_event": {
+                "external_id": "4eabbv08tl0adre42pf2m8hhqg",
+                "kind": "google"
+            },
+            "created_at": "2024-02-27T03:12:58.189148Z",
+            "end_time": "2024-03-02T22:30:00.000000Z",
+            "event_guests": [],
+            "event_memberships": [
+                {
+                    "buffered_end_time": "2024-03-02T22:45:00.000000Z",
+                    "buffered_start_time": "2024-03-02T20:45:00.000000Z",
+                    "user": "https://api.calendly.com/users/c94ef0bf-4139-4fbd-9775-7fad5080ebd1",
+                    "user_email": "sales@springsrv.com",
+                    "user_name": "Springs RV Resort"
+                }
+            ],
+            "event_type": "https://api.calendly.com/event_types/ea14eb00-1940-44c6-9dad-07190da6b877",
+            "invitees_counter": {
+                "active": 1,
+                "limit": 1,
+                "total": 1
+            },
+            "location": {
+                "additional_info": "",
+                "location": "670 Hot Springs Rd., Harrison Hot Springs, BC",
+                "type": "physical"
+            },
+            "meeting_notes_html": null,
+            "meeting_notes_plain": null,
+            "name": "Springs RV Resort Sales Meeting ",
+            "start_time": "2024-03-02T21:00:00.000000Z",
+            "status": "active",
+            "updated_at": "2024-02-27T03:12:59.267306Z",
+            "uri": "https://api.calendly.com/scheduled_events/fab9281c-dabc-4b15-a443-d08beef385e2"
+        },
+        "email": "sales@springsrv.com",
+        "date": "2025-04-29T09:25:22.495534",
+        "tour_date": "2024-03-02",
+        "tour_time": "21:00"
+    },
+    {
+        "subscription": {
+            "calendar_event": {
+                "external_id": "n85ut4jbd74kuvfefnfq24f2v4",
+                "kind": "google"
+            },
+            "created_at": "2024-02-28T18:58:12.571432Z",
+            "end_time": "2024-03-03T21:00:00.000000Z",
+            "event_guests": [],
+            "event_memberships": [
+                {
+                    "buffered_end_time": "2024-03-03T21:15:00.000000Z",
+                    "buffered_start_time": "2024-03-03T19:15:00.000000Z",
+                    "user": "https://api.calendly.com/users/c94ef0bf-4139-4fbd-9775-7fad5080ebd1",
+                    "user_email": "sales@springsrv.com",
+                    "user_name": "Springs RV Resort"
+                }
+            ],
+            "event_type": "https://api.calendly.com/event_types/ea14eb00-1940-44c6-9dad-07190da6b877",
+            "invitees_counter": {
+                "active": 1,
+                "limit": 1,
+                "total": 1
+            },
+            "location": {
+                "additional_info": "",
+                "location": "670 Hot Springs Rd., Harrison Hot Springs, BC",
+                "type": "physical"
+            },
+            "meeting_notes_html": null,
+            "meeting_notes_plain": null,
+            "name": "Springs RV Resort Sales Meeting ",
+            "start_time": "2024-03-03T19:30:00.000000Z",
+            "status": "active",
+            "updated_at": "2024-02-28T18:58:13.817725Z",
+            "uri": "https://api.calendly.com/scheduled_events/2cbc4752-3987-4e4a-ac1c-afe4931f5c5b"
+        },
+        "email": "sales@springsrv.com",
+        "date": "2025-04-29T09:25:22.515844",
+        "tour_date": "2024-03-03",
+        "tour_time": "19:30"
+    },
+    {
+        "subscription": {
+            "calendar_event": {
+                "external_id": "rcitbq9p8378go2br71gor0d50",
+                "kind": "google"
+            },
+            "created_at": "2024-02-28T23:44:45.419935Z",
+            "end_time": "2024-03-02T20:30:00.000000Z",
+            "event_guests": [],
+            "event_memberships": [
+                {
+                    "buffered_end_time": "2024-03-02T20:45:00.000000Z",
+                    "buffered_start_time": "2024-03-02T18:45:00.000000Z",
+                    "user": "https://api.calendly.com/users/c94ef0bf-4139-4fbd-9775-7fad5080ebd1",
+                    "user_email": "sales@springsrv.com",
+                    "user_name": "Springs RV Resort"
+                }
+            ],
+            "event_type": "https://api.calendly.com/event_types/ea14eb00-1940-44c6-9dad-07190da6b877",
+            "invitees_counter": {
+                "active": 1,
+                "limit": 1,
+                "total": 1
+            },
+            "location": {
+                "additional_info": "",
+                "location": "670 Hot Springs Rd., Harrison Hot Springs, BC",
+                "type": "physical"
+            },
+            "meeting_notes_html": null,
+            "meeting_notes_plain": null,
+            "name": "Springs RV Resort Sales Meeting ",
+            "start_time": "2024-03-02T19:00:00.000000Z",
+            "status": "active",
+            "updated_at": "2024-02-28T23:44:46.303571Z",
+            "uri": "https://api.calendly.com/scheduled_events/8bd9d075-1abe-42d4-bb8b-0b5f428d6a50"
+        },
+        "email": "sales@springsrv.com",
+        "date": "2025-04-29T09:25:22.537466",
+        "tour_date": "2024-03-02",
+        "tour_time": "19:00"
+    },
+    {
+        "subscription": {
+            "calendar_event": {
+                "external_id": "jvummec853c869clkd2961bvp0",
+                "kind": "google"
+            },
+            "created_at": "2024-02-29T19:06:44.607537Z",
+            "end_time": "2024-03-11T22:00:00.000000Z",
+            "event_guests": [],
+            "event_memberships": [
+                {
+                    "buffered_end_time": "2024-03-11T22:15:00.000000Z",
+                    "buffered_start_time": "2024-03-11T20:15:00.000000Z",
+                    "user": "https://api.calendly.com/users/c94ef0bf-4139-4fbd-9775-7fad5080ebd1",
+                    "user_email": "sales@springsrv.com",
+                    "user_name": "Springs RV Resort"
+                }
+            ],
+            "event_type": "https://api.calendly.com/event_types/ea14eb00-1940-44c6-9dad-07190da6b877",
+            "invitees_counter": {
+                "active": 1,
+                "limit": 1,
+                "total": 1
+            },
+            "location": {
+                "additional_info": "",
+                "location": "670 Hot Springs Rd., Harrison Hot Springs, BC",
+                "type": "physical"
+            },
+            "meeting_notes_html": null,
+            "meeting_notes_plain": null,
+            "name": "Springs RV Resort Sales Meeting ",
+            "start_time": "2024-03-11T20:30:00.000000Z",
+            "status": "active",
+            "updated_at": "2024-02-29T19:06:45.752171Z",
+            "uri": "https://api.calendly.com/scheduled_events/eb026559-06cc-473f-b6d6-de182e594858"
+        },
+        "email": "sales@springsrv.com",
+        "date": "2025-04-29T09:25:22.558079",
+        "tour_date": "2024-03-11",
+        "tour_time": "20:30"
+    },
+    {
+        "subscription": {
+            "calendar_event": {
+                "external_id": "u9b4a3s75ffmtap821jkrqds1o",
+                "kind": "google"
+            },
+            "created_at": "2024-03-02T20:22:26.219348Z",
+            "end_time": "2024-03-10T01:00:00.000000Z",
+            "event_guests": [],
+            "event_memberships": [
+                {
+                    "buffered_end_time": "2024-03-10T01:15:00.000000Z",
+                    "buffered_start_time": "2024-03-09T23:15:00.000000Z",
+                    "user": "https://api.calendly.com/users/c94ef0bf-4139-4fbd-9775-7fad5080ebd1",
+                    "user_email": "sales@springsrv.com",
+                    "user_name": "Springs RV Resort"
+                }
+            ],
+            "event_type": "https://api.calendly.com/event_types/ea14eb00-1940-44c6-9dad-07190da6b877",
+            "invitees_counter": {
+                "active": 1,
+                "limit": 1,
+                "total": 1
+            },
+            "location": {
+                "additional_info": "",
+                "location": "670 Hot Springs Rd., Harrison Hot Springs, BC",
+                "type": "physical"
+            },
+            "meeting_notes_html": null,
+            "meeting_notes_plain": null,
+            "name": "Springs RV Resort Sales Meeting ",
+            "start_time": "2024-03-09T23:30:00.000000Z",
+            "status": "active",
+            "updated_at": "2024-03-02T20:22:27.296222Z",
+            "uri": "https://api.calendly.com/scheduled_events/21da877c-3e66-461f-85eb-ca93714ee942"
+        },
+        "email": "sales@springsrv.com",
+        "date": "2025-04-29T09:25:22.579022",
+        "tour_date": "2024-03-09",
+        "tour_time": "23:30"
     }
 ]
